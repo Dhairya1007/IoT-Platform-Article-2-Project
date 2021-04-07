@@ -20,13 +20,11 @@
 // variables and object initializations
 
 // 1. WiFi Credentials
-const char* ssid = "Dhairya";
-const char* password = "9428914308";
+const char* ssid = "wifi_ssid";
+const char* password = "wifi_password";
 
 // 2. MQTT Broker Credentials
-const char* mqtt_server = "139.59.90.224";
-const char* mqttUser = "whizkey";
-const char* mqttPassword = "whizkey";
+const char* mqtt_server = "your_server_id";
 
 /* 
  *  These are optional as we have not set any authentication for our Broker.
@@ -141,7 +139,7 @@ void reconnect() {
     Serial.print("Attempting MQTT connection...");
     // Attempt to connect
 
-    if(client.connect("test_client_2", mqttUser, mqttPassword )) 
+    if(client.connect("test_client_2")) 
     {
       Serial.println("connected");
       client.publish("outTopic", "Reconnected!");
@@ -231,7 +229,7 @@ void setup()
      * NOTE : The Client Name should be unique.
      */
      
-    if (client.connect("test_client_1", mqttUser, mqttPassword )) 
+    if (client.connect("test_client_1")) 
     {
       client.publish("outTopic", "Connected!");
       Serial.println("connected");  

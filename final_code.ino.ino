@@ -42,7 +42,7 @@ uint8_t switch1 = D0;
 uint8_t switch2 = D1;
 uint8_t switch3 = D2;
 uint8_t switch4 = D3;
-uint8_t DHTpin = D5;
+uint8_t DHTpin = D4;
 
 // Timers auxiliary variables for DHT value measurements. 
 long now = millis();
